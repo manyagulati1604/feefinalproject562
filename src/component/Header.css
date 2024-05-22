@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+   
+    color: white;
+}
+
+.header{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size:25px;
+    color:white;
+    text-decoration: none;
+    font-weight:600;
+}
+
+.logo::before{
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    
+    animation: showRight 1s ease forwards; 
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 18px;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition:.3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+   
+    color: white;
+} 
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        justify-content: flex-end; /* Align items to the right on smaller screens */
+        margin-top: 10px; /* Added margin to separate logo and nav links */
+    }
+
+    .navbar a {
+        margin: 10px 15px; /* Adjusted margin for better spacing on smaller screens */
+    }
+}
+
+
